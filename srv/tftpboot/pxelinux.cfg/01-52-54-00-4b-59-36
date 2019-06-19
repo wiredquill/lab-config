@@ -16,4 +16,4 @@ label install-52-54-00-4b-59-36
 label install-52-54-00-4b-59-36
  menu label install-52-54-00-4b-59-36 (workstation- Autoyast)
   kernel SLE15sp1/linux
-  append load_ramdisk=1 initrd=SLE15sp1/initrd netsetup=dhcp hostname=workstation autoyast=http://192.168.110.2/autoyast install=http://192.168.110.2/repo/SUSE/Install/15sp1/x86_64
+  append load_ramdisk=1 initrd=SLE15sp1/initrd netsetup=dhcp hostname=workstation autoyast=http://192.168.110.2/repo/autoyast.xml install=http://192.168.110.2/repo/SUSE/Install/15sp1/x86_64
