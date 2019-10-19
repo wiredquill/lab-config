@@ -23,8 +23,9 @@ echo
 echo Done installing Fanshim
 
 echo Installing Latest Node-Red
-echo 
-curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered
+echo
+cd lab-config 
+sh update-nodejs-and-nodered.sh
 
 echo
 echo Done installing Node Red
