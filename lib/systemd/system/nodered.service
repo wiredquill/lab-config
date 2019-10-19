@@ -8,9 +8,14 @@ Documentation=http://nodered.org/docs/hardware/raspberrypi.html
 [Service]
 Type=simple
 # Run as normal pi user - change to the user name you wish to run Node-RED as
-User=pi
-Group=pi
+# Changed to Root so that Amazon Echo plugin will work
+User=root
+Group=root
 WorkingDirectory=/home/pi
+
+# Added for Amazon Echo support
+
+Environment=ALEXA_PORT=80
 
 Nice=5
 Environment="NODE_OPTIONS=--max_old_space_size=256"
