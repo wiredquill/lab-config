@@ -25,7 +25,7 @@ echo Done installing Fanshim
 echo Installing Latest Node-Red
 echo
 cd lab-config 
-sh update-nodejs-and-nodered.sh
+bash update-nodejs-and-nodered.sh
 
 echo
 echo Done installing Node Red
