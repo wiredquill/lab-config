@@ -63,15 +63,17 @@ echo "not damage your Pi, or otherwise compromise your configuration."
 echo "If in doubt please backup your SD card first."
 echo " "
 
-# read -p "Are you really sure you want to do this ? [y/N] ? " yn
-#case $yn in
-#    [Yy]* )
+read -p "Are you really sure you want to do this ? [y/N] ? " yn
+case $yn in
+    [Yy]* )
         echo ""
         EXTRANODES=""
         EXTRAW="update"
+        read -r -t 15 -p "Would you like to install the Pi-specific nodes ? [y/N] ? " response
+        if [[ "$response" =~ ^([yY])+$ ]]; then
             EXTRANODES="node-red-node-pi-gpio node-red-node-random node-red-node-ping node-red-contrib-play-audio node-red-node-smooth node-red-node-serialport"
             EXTRAW="install"
-
+        fi
 
         # this script assumes that $HOME is the folder of the user that runs node-red
         # that $USER is the user name and the group name to use when running is the
@@ -357,7 +359,7 @@ echo " "
         echo " "
         exit 1
     ;;
-# esac
+esac
 else
 echo " "
 echo "Sorry - cannot connect to internet - not going to touch anything."
