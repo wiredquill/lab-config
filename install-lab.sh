@@ -36,17 +36,14 @@ echo
 sudo cp /home/pi/lab-config/lib/systemd/system/nodered.service /lib/systemd/system
 sudo systemctl enable --now nodered.service
 sudo systemctl stop nodered.service
-cp /home/pi/lab-config/node-red /home/pi/.node-red
+cp /home/pi/lab-config/node-red/settings.js /home/pi/.node-red
 sudo systemctl start nodered.service
 
 echo done updating Node Red
 echo
 echo copying boot config
-sudo cp /home/pi/boot /boot
+sudo cp /home/pi/lab-config/boot/config.txt /boot
 
 echo
 echo reboot to activate
 
-cd ~/lab-config
-git pull
-cp -r /home/tux/lab-config/srv/* /srv/
