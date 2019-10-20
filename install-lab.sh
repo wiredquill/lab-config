@@ -37,7 +37,6 @@ sudo cp /home/pi/lab-config/lib/systemd/system/nodered.service /lib/systemd/syst
 sudo systemctl enable --now nodered.service
 sudo systemctl stop nodered.service
 cp /home/pi/lab-config/node-red/settings.js /home/pi/.node-red
-sudo cp /home/pi/lab-config/node-red/settings.js /root/.node-red
 sudo systemctl start nodered.service
 
 echo done updating Node Red
